@@ -1,11 +1,19 @@
 setup = function() {
     size(400, 400);
+    textFont(createFont("serif"))
 };
 
 var answer = 1;
 var answer=2;
 
 draw = function(){
+
+if(keyPressed){
+if(key == 'a')
+sceneImage= spaceImage;
+}
+
+
   background(100,149,237);
   fill(137, 207, 240);
   ellipse(200, 200, 375, 375);
@@ -28,6 +36,15 @@ draw = function(){
 
 mouseClicked = function(){
   answer = round(random(1, 5));
+  
+    if(mousePressed){
+  
+  fillLove();
+  fillSpace();
+  fillSmile();
+  fillCalm();
+  fillSoft();
+  }
 };
 
 
