@@ -32,19 +32,48 @@ sceneImage= spaceImage;
   
   }
   
-};
 
-mouseClicked = function(){
-  answer = round(random(1, 5));
+
+
+
   
-    if(mousePressed){
   
-  fillLove();
-  fillSpace();
-  fillSmile();
-  fillCalm();
-  fillSoft();
+  
+  
+  let circleColor;
+let responses = ["Yes", "No", "Maybe", "Ask again", "Definitely", "Not likely"];
+let circleSize = 150;
+
+function setup() {
+  let canvas = createCanvas(400, 400);
+  canvas.parent("canvas-container");
+  circleColor = color(0, 200, 255);
+}
+
+function draw() {
+  background(220);
+  fill(circleColor);
+  stroke(0);
+  strokeWeight(4);
+  ellipse(width / 2, height / 2, circleSize, circleSize);
+
+  fill(0, 100, 150);
+  triangle(width / 2, height / 2 - 30, width / 2 - 30, height / 2 + 30, width / 2 + 30, height / 2 + 30);
+
+  
+  if (mouseX < width / 2) {
+    circleColor = color(100, 200, 255);
+  } else {
+    circleColor = color(0, 150, 255);
   }
+}
+
+function getPrediction() {
+  let index = int(random(responses.length));
+  document.getElementById("prediction").innerText = responses[index];
+}
+
+
 };
 
 

@@ -21,30 +21,7 @@ Select ONE Additional
     <title>Unit 9 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js">
-    float circleSize = 50;
-color circleColor;
-
-void setup() {
-  size(400, 400);
-  circleColor = color(0, 200, 255);  
-}
-
-void draw() {
-  background(255);
-  drawCircle(mouseX, mouseY);
-}
-
-
-void drawCircle(float x, float y) {
-  fill(circleColor);
-  noStroke();
-  ellipse(x, y, circleSize, circleSize);
-}
-
-void mousePressed() {
-  circleColor = color(random(255), random(255), random(255));
-}
-
+    
     
     
     </script>
